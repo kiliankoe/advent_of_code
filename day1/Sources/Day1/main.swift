@@ -2,8 +2,7 @@ import Foundation
 
 let inputFile = Bundle.module.url(forResource: "input", withExtension: "txt")!
 let input = try! String(contentsOf: inputFile)
-    .split(separator: "\n")
-    .map(String.init)
+    .components(separatedBy: .newlines)
     .compactMap(Int.init)
 
 for entry in input {
