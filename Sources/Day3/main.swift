@@ -3,7 +3,7 @@ import Foundation
 extension String {
     subscript(wrapping offset: Int) -> Character {
         get {
-            if offset >= self.count {
+            guard offset < self.count else {
                 let diff = offset % self.count
                 return self[self.index(self.startIndex, offsetBy: diff)]
             }
