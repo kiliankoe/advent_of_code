@@ -17,5 +17,8 @@ let package = Package(
             name: "Day2",
             dependencies: ["Regex"]),
         .target(name: "Day3"),
+        .target(
+            name: "Day4",
+            dependencies: ["Regex"]),
     ]
 )
