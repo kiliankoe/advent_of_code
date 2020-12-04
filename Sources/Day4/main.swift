@@ -64,8 +64,7 @@ struct Passport {
 
 let validPassports = inputStr.components(separatedBy: "\n\n")
     .map { data -> [String: String] in
-        let keyValuePairs = data.replacingOccurrences(of: "\n", with: " ")
-            .components(separatedBy: .whitespaces)
+        let keyValuePairs = data.components(separatedBy: .whitespacesAndNewlines)
             .map { $0.components(separatedBy: ":") }
             .map { ($0[0], $0[1]) }
         return Dictionary(uniqueKeysWithValues: keyValuePairs)
