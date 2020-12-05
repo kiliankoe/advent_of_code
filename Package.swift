@@ -8,6 +8,7 @@ let package = Package(
         .package(url: "https://github.com/sharplet/Regex", from: "2.1.1"),
     ],
     targets: [
+        .target(name: "Util"),
         .target(
             name: "Day1",
             resources: [
@@ -20,5 +21,6 @@ let package = Package(
         .target(
             name: "Day4",
             dependencies: ["Regex"]),
+        .target(name: "Day5", dependencies: ["Util"]),
     ]
 )
