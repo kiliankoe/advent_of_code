@@ -4,6 +4,13 @@ extension URL {
     public func stringContent() -> String? {
         try? String(contentsOf: self)
     }
+
+    public func puzzleInput() -> [String]? {
+        self
+            .stringContent()?
+            .components(separatedBy: .newlines)
+            .dropLast()
+    }
 }
 
 public func measure(_ block: () -> Void) {
