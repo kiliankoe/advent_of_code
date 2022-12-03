@@ -1,10 +1,5 @@
 import Foundation
 
-infix operator |> : AssignmentPrecedence
-public func |><T, U>(lhs: T, rhs: (T) -> U) -> U {
-    rhs(lhs)
-}
-
 extension URL {
     public func stringContent() -> String? {
         try? String(contentsOf: self)
