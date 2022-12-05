@@ -4,6 +4,10 @@ import PackageDescription
 
 let package = Package(
     name: "AdventOfCode2022",
+    platforms: [
+        .macOS(.v13),
+        .iOS(.v16),
+    ],
     dependencies: [],
     targets: [
         .target(name: "Util"),
@@ -32,6 +36,14 @@ let package = Package(
         ),
         .executableTarget(
             name: "Day4",
+            dependencies: ["Util"],
+            resources: [
+                .copy("example.txt"),
+                .copy("input.txt")
+            ]
+        ),
+        .executableTarget(
+            name: "Day5",
             dependencies: ["Util"],
             resources: [
                 .copy("example.txt"),
