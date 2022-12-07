@@ -58,5 +58,13 @@ let package = Package(
                 .copy("input.txt")
             ]
         ),
+        .executableTarget(
+            name: "Day7",
+            dependencies: ["Util"],
+            resources: [
+                .copy("example.txt"),
+                .copy("input.txt")
+            ]
+        ),
     ]
 )
